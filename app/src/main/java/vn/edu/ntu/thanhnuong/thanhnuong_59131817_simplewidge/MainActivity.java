@@ -58,19 +58,19 @@ public class MainActivity extends AppCompatActivity {
     private void xacNhanTT() {
         String temp = ""; //khai báo biến temp để lưu các thông tin mình check trong checkbox
 
-        temp += "" + edtTen.getText().toString();
-        temp += "\nNgày sinh: " + edtNgaySinh.getText().toString();
+        temp = temp + "" + edtTen.getText().toString();
+        temp = temp + "\nNgày sinh: " + edtNgaySinh.getText().toString();
 
         switch (rdgGioiTinh.getCheckedRadioButtonId()) {
             case R.id.rdbNam:
-                temp += "\nGiới tính: Nam";
+                temp = temp + "\nGiới tính: Nam";
                 break;
             case R.id.rdbNu:
-                temp += "\nGiới tính: Nữ";
+                temp = temp +  "\nGiới tính: Nữ";
                 break;
         }
 
-        temp += "\nSở thích: ";
+        temp = temp + "\nSở thích: ";
         if (checkMovie.isChecked()) {
             temp = temp + checkMovie.getText().toString();
             temp = temp + " , ";
